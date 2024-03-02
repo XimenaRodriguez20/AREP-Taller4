@@ -106,6 +106,8 @@ Ahora bien, si desea crear mas anotacionse, debe crear una clase en la carpeta c
 
 ![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/2ffcdb5f-be25-4ab2-94a0-bde38570c590)
 
+Si desea que la anotacion para metodos, reciba varios parametros, puede agregar mas atributos a la clase, sin embargo tenga en cuenta que a la hora de usar la anotacion tendra que colocar el nombre de la variable, es decir, si a la clase siguiente se agrega un nuevo atriburo como name, a la hora de usar la anotacion se deberia colocar @GetMapping("/hola", name="name"):
+
 ![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/359b776a-e8c9-4845-abe1-de354826e5ea)
 
 ## Autor
