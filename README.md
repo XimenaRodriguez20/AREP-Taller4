@@ -68,7 +68,7 @@ En este proyecto, se tiene un servidor Web de Java, el cual es capaz de recibir 
 
   * Para evidenciar que se esta obteniendo las imagenes desde el disco local, escribimos en el path de la pagina web el nombre del las imagenes que tenemos en disco local que son: john.jpeg y dolphin.jpg
 
-  ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/33193bfe-2e17-4e0f-bb59-7cd120c0d139)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/19f23843-fe15-4d0a-9299-5b2e05ff96b8)
 
   ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/7faedfe9-51ea-4186-aecd-68ef24dec66a)
 
