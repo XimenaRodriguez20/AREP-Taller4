@@ -11,4 +11,11 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.mycompany.clase4.Clase4</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.12</version>
+        </dependency>
+    </dependencies>
 </project>
