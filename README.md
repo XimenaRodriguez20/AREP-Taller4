@@ -1,10 +1,7 @@
 # AREP-Taller4 AREP - Arquitecturas de Servidores de Aplicaciones, Meta protocolos de objetos, Patrón IoC, Reflexión
 
-Para este laboratorio seguiremos  servidor Web en Java. El servidor debe ser capaz de entregar páginas html e imágenes tipo PNG. Igualmente el servidor debe proveer un framework IoC para la construcción de aplicaciones web a partir de POJOS. Usando el servidor se debe construir una aplicación Web de ejemplo. El servidor debe atender múltiples solicitudes no concurrentes.
+Para este laboratorio seguiremos servidor Web en Java. El servidor debe ser capaz de entregar páginas html e imágenes tipo PNG. Igualmente el servidor debe proveer un framework IoC para la construcción de aplicaciones web a partir de POJOS. Usando el servidor se debe construir una aplicación Web de ejemplo. El servidor debe atender múltiples solicitudes no concurrentes.
 
-Para este taller desarrolle un prototipo mínimo que demuestre capcidades reflexivas de JAVA y permita por lo menos cargar un bean (POJO) y derivar una aplicación Web a partir de él. 
-
-Debe entregar su trabajo al final del laboratorio. Luego puede complementar para entregarlo en 8 días. Se verificara y compararán el commit del día de inicio del laboratorio y el dela entrega final.
 
 ## Prerequisitos 
 
@@ -44,32 +41,36 @@ Debe entregar su trabajo al final del laboratorio. Luego puede complementar para
 
 
   ## Pruebas
-  
+
+  * Para evidenciar el funcionamiento del endpoint creado con anotaciones luego de consultar la url **http://localhost:35000/spring/hola** tambien se puede ver, que recibe parametros, pues dentro de la pagina se puede ver que parte de la URL se imprime junto con un mensaje por defecto:
+
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/83404e32-283a-400a-b992-c1929de8835b)
+
   * Para evidenciar lo que hace nuestro servidor con la petición get, abrimos un navergador web y escribrimos **localhost:35000/action/hola** :
 
-     ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/9346c6b0-4c94-4a0d-9cf6-6b5a1d1322ce)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/9346c6b0-4c94-4a0d-9cf6-6b5a1d1322ce)
 
   Para evidenciar que esta jalando los archivos estaticos como html, css, js, escribimos en el navegador **localhost:35000/[respectivo archivo estatico que desee consultar]** 
-   ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/4c75ba74-a898-4c73-8de6-b16b7b607852)
+  
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/4c75ba74-a898-4c73-8de6-b16b7b607852)
 
-   ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/7b813e25-08a4-448b-b274-06ae23e97465)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/7b813e25-08a4-448b-b274-06ae23e97465)
 
-   ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/5ab8527a-e656-4d8f-841f-4703e2024329)
-
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/5ab8527a-e656-4d8f-841f-4703e2024329)
 
   * Para buscar una pelicula debemos escribir el nombre de la pelicula y darle click al boton, en caso contrario si solo damos enter no nos va a dar ninguna información:
     
-     ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/14d4b2e8-7840-4c24-868c-67bc0fa02578)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/14d4b2e8-7840-4c24-868c-67bc0fa02578)
 
-    ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/926e7d02-84b4-4b30-a0e0-94fa38ead6e9)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/926e7d02-84b4-4b30-a0e0-94fa38ead6e9)
 
   * Para evidenciar que se esta obteniendo las imagenes desde el disco local, escribimos en el path de la pagina web el nombre del las imagenes que tenemos en disco local que son: john.jpeg y dolphin.jpg
 
-    ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/33193bfe-2e17-4e0f-bb59-7cd120c0d139)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/33193bfe-2e17-4e0f-bb59-7cd120c0d139)
 
-    ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/7faedfe9-51ea-4186-aecd-68ef24dec66a)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/7faedfe9-51ea-4186-aecd-68ef24dec66a)
 
-    ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/09f7d8bf-f2e2-489d-a931-63482627f7bb)
+  ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/09f7d8bf-f2e2-489d-a931-63482627f7bb)
 
 * Para la petición post, se puede probar colocando el siguiente path http://localhost:35000/action/recibido:
 
@@ -94,6 +95,18 @@ Debe entregar su trabajo al final del laboratorio. Luego puede complementar para
    
    ### MySpringBoot
    Es la clase que permite cargar los POJOs que cuenten con una anotacion en particular, tambien permite hacer la invocacion de metodos gracias a que al cargar los POJOs, guarda los metodos que cumplen con las anotaciones que estan hasta el momento creadas, de esta forma se puede ejecutar un metodo en particular si se tiene el valor de la anotacion como "/hola"
+
+## Uso del Framekork para el desarrollador
+
+Si desesa añadir un nuevo endpoint, unicamente tendra que crear un nuevo metodo en la clase Controller siguiendo la estructura de los otros metodos. En el @GetMapping debe colocar cual es el endpoint al cual desea redireccionar las peticiones y dentro del metodo definir el comportamiento que tendra, cabe aclarar que los endpoints deben ser distintos y lo que devuelva el metodo debe ser String:
+
+![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/99e01dbd-03b6-431f-a3df-892a9a410a3d)
+
+Ahora bien, si desea crear mas anotacionse, debe crear una clase en la carpeta components y seguir la estructura de las dos clases que ya estan definidas, si desea crear una anotacion de clase use la estructura de la primera imagen, cambiando el nombre de la clase y si desea crear una anotacion para los metodos, use la estructura de la segunda iamgen:
+
+![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/2ffcdb5f-be25-4ab2-94a0-bde38570c590)
+
+![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/359b776a-e8c9-4845-abe1-de354826e5ea)
 
 ## Autor
 
