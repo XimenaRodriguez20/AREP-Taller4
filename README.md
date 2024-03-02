@@ -1,6 +1,6 @@
 # AREP-Taller4 AREP - Arquitecturas de Servidores de Aplicaciones, Meta protocolos de objetos, Patrón IoC, Reflexión
 
-Para este laboratorio seguiremos servidor Web en Java. El servidor debe ser capaz de entregar páginas html e imágenes tipo PNG. Igualmente el servidor debe proveer un framework IoC para la construcción de aplicaciones web a partir de POJOS. Usando el servidor se debe construir una aplicación Web de ejemplo. El servidor debe atender múltiples solicitudes no concurrentes.
+En este proyecto, se tiene un servidor Web de Java, el cual es capaz de recibir peticiones de distintos tipos, como GET y POST, los cuales retornan respuestas distintas, tambien tiene la capacidad de retornar diferentes tipos de documentos, es decir, tiene la capacidad de devolver documentos tipo HTML, JS, CSS e incluso distintos tipos de imagenes como JPG y PNG. La novedad de esta entrega esta en que ahora, gracias a la clase MySpringBoot y las clases que definen las anotaciones, el proyecto tiene la capacidad que antes de que inicie el servidor cargue a una lista los metodos dentro de las clases que tienen unas anotaciones especificas, logrando asi, un comportamiento similar al de SpringBoot, además una vez cargadas, el programa tiene la capacidad de determinar segun la URL de la peticion que reciba usar los metodos definidos con estas anotaciones, logrando asi nuevamente un comportamiento similar al de SpringBoot
 
 
 ## Prerequisitos 
@@ -46,6 +46,8 @@ Para este laboratorio seguiremos servidor Web en Java. El servidor debe ser capa
 
   ![image](https://github.com/XimenaRodriguez20/AREP-Taller4/assets/123812926/83404e32-283a-400a-b992-c1929de8835b)
 
+  * Para comprobar que no se afecto nada de las entregas anteriores haremos las siguientes prubras:
+
   * Para evidenciar lo que hace nuestro servidor con la petición get, abrimos un navergador web y escribrimos **localhost:35000/action/hola** :
 
   ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/9346c6b0-4c94-4a0d-9cf6-6b5a1d1322ce)
@@ -75,6 +77,12 @@ Para este laboratorio seguiremos servidor Web en Java. El servidor debe ser capa
 * Para la petición post, se puede probar colocando el siguiente path http://localhost:35000/action/recibido:
 
     ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/25e6b416-250d-4272-8702-d2f11fd01999)
+
+*  Si desea  tambien en la terminal del IDE puede correr la carpeta test de la siguiente forma:
+
+~~~
+mvn test
+~~~
 
 ## Arquitectura del programa
 
