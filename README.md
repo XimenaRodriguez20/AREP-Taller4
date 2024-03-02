@@ -78,12 +78,22 @@ Debe entregar su trabajo al final del laboratorio. Luego puede complementar para
 ## Arquitectura del programa
 
    HttpServer
-    Es la clase que obtendra las solicitudes  y se encargara respectivamente de retonar la información que se solicita
+    Es la clase que obtendra las solicitudes  y se encargara respectivamente de retonar la información que se solicita, esto a travez de el llamado a otros metodos de otras clases, a los cuales les suministra la URL obtenida, con la cual puede variar su comportamiento asi como la respuesta
 
    App 
-    Sera quien nos permita ejecutar el servidor y asi mismo quien tendra las indicaciones lambda
+    Sera quien nos permita ejecutar el servidor y asi mismo quien tendra las indicaciones lambda, para enta entrega en esta clase tambien se ejecuta un metodo que escanea todas las clases que cuenten con unas anotacoines especificas
 
+   Controller
+    Es la clase define cuales con los endpoints que se van a manejar, estos enpoints se configuran dentro de la anotacion "@GetMapping". Esto sirve al momento de que cuando la clase HttpServer reciba una peticion a un endpoint en especifico, este redireccione a alguno de estos metodos para obtener el resultado deseado
+    
+   Component
+    Es la clase que configura la anotacion de clase, esta es la anotacion que esta escaneando MySpringBoot
 
+   GetMapping
+    Es la clase que configura la anotacion de metodos , esta es la anotacion que esta escaneando MySpringBoot
+   
+   MySpringBoot
+    Es la clase que permite cargar los POJOs que cuenten con una anotacion en particular, tambien permite hacer la invocacion de metodos gracias a que al cargar los POJOs, guarda los metodos que cumplen con las anotaciones que estan hasta el momento creadas, de esta forma se puede ejecutar un metodo en particular si se tiene el valor de la anotacion como "/hola"
 
 ## Autor
 
