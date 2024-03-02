@@ -1,9 +1,11 @@
-package com.mycompany.clase4.example.runtime;
+package com.escuelaing.principal;
 
 /**
  *
  * @author ximena.rodriguez
  */
+
+import com.escuelaing.components.MySpringBoot;
 
 import java.net.*;
 import java.io.*;

@@ -2,12 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.clase4.components;
+package com.escuelaing.components;
 
-import com.mycompany.clase4.example.runtime.Component;
-import com.mycompany.clase4.example.runtime.GetMapping;
-import com.mycompany.clase4.example.runtime.HttpServer;
-import com.mycompany.clase4.example.runtime.MySpringBoot;
+import com.escuelaing.principal.HttpServer;
 
 import java.net.URI;
 

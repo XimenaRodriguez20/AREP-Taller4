@@ -2,11 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.clase4.example.runtime;
+package com.escuelaing.components;
 
 import org.reflections.Reflections;
+import org.reflections.scanners.TypeAnnotationsScanner;
 
-import java.lang.reflect.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
@@ -37,7 +39,7 @@ public class MySpringBoot {
         //para la entrega final lo deben leer en disco
         running = true;
         if (args.length == 0 ){
-            Reflections reflections = new Reflections("com.mycompany.clase4");
+            Reflections reflections = new Reflections("com.escuelaing");
             Set<Class<?>> classes = reflections.getTypesAnnotatedWith(Component.class);
 
             for (Class<?> c : classes) {
